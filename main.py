@@ -25,6 +25,7 @@ def set_id3v1(file, title):
 	file.write(to_write)
 
 def set_id3v2(file, title):
+
 	return False
 
 def proc(path):
@@ -34,7 +35,7 @@ def proc(path):
 	file = open(path, 'r+b')
 	ver = check_mp3ver(file)
 
-        
+		
 	if ver == -1:
 		return False
 	
@@ -54,4 +55,4 @@ for path in sys.argv[1:]:
 			for fname in fpath:
 				proc(fname)
 	else:
-		
+		print('<', path, '> not Exists')
